@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<VBox spacing="10" alignment="CENTER" xmlns="http://javafx.com/javafx" xmlns:fx="http://javafx.com/fxml"
+      fx:controller="com.example.electronicdevice.HelloController">
+
+    <TabPane fx:id="deviceTabPane">
+        <Tab text="Smartphone">
+            <VBox spacing="5">
+                <TextField fx:id="smartphoneNameField" promptText="Name"/>
+                <TextField fx:id="smartphonePriceField" promptText="Price"/>
+                <TextField fx:id="smartphoneWeightField" promptText="Weight"/>
+                <TextField fx:id="screenSizeField" promptText="Screen Size"/>
+                <TextField fx:id="cameraResolutionField" promptText="Camera Resolution"/>
+            </VBox>
+        </Tab>
+        <Tab text="Laptop">
+            <VBox spacing="5">
+                <TextField fx:id="laptopNameField" promptText="Name"/>
+                <TextField fx:id="laptopPriceField" promptText="Price"/>
+                <TextField fx:id="laptopWeightField" promptText="Weight"/>
+                <TextField fx:id="ramSizeField" promptText="RAM Size"/>
+                <TextField fx:id="processorTypeField" promptText="Processor Type"/>
+            </VBox>
+        </Tab>
+        <Tab text="Tablet">
+            <VBox spacing="5">
+                <TextField fx:id="tabletNameField" promptText="Name"/>
+                <TextField fx:id="tabletPriceField" promptText="Price"/>
+                <TextField fx:id="tabletWeightField" promptText="Weight"/>
+                <TextField fx:id="batteryLifeField" promptText="Battery Life"/>
+                <CheckBox fx:id="hasStylusField" text="Has Stylus"/>
+            </VBox>
+        </Tab>
+    </TabPane>
+    <RadioButton fx:id="Smartphone" text="Smartphone" toggleGroup="$deviceGroup"/>
+    <RadioButton fx:id="Laptop" text="Laptop" toggleGroup="$deviceGroup"/>
+    <RadioButton fx:id="Tablet" text="Tablet" toggleGroup="$deviceGroup"/>
+    <Button fx:id="addButton" text="Add" onAction="#onAddClick"/>
+    <ListView fx:id="listView" prefHeight="150" onMouseClicked="#onListClicked"/>
+    <Button fx:id="removeButton" text="Remove" onAction="#onRemoveClick"/>
+    <Label fx:id="label"/>
+</VBox>
